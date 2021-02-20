@@ -70,12 +70,12 @@ def resolve_dotted_name(name: Union[str, ast.Name, ast.Attribute, ast.Call, ast.
 	elif isinstance(name, ast.Name):
 		yield name.id
 	elif isinstance(name, ast.Attribute):
-		yield from resolve_dotted_name(name.value)
+		yield from resolve_dotted_name(name.value)  # type: ignore
 		yield from resolve_dotted_name(name.attr)
 	elif isinstance(name, ast.Subscript):
-		yield from resolve_dotted_name(name.value)
+		yield from resolve_dotted_name(name.value)  # type: ignore
 	elif isinstance(name, ast.Call):
-		yield from resolve_dotted_name(name.func)
+		yield from resolve_dotted_name(name.func)  # type: ignore
 
 
 class Visitor(flake8_helper.Visitor):
@@ -85,7 +85,7 @@ class Visitor(flake8_helper.Visitor):
 
 	def visit_ClassDef(self, node: ast.ClassDef):  # noqa: D102
 
-		bases = ['.'.join(resolve_dotted_name(base)) for base in node.bases]
+		bases = ['.'.join(resolve_dotted_name(base)) for base in node.bases]  # type: ignore
 
 		is_str = "str" in bases or "builtins.str" in bases  # SLOT000
 
