@@ -147,6 +147,7 @@ Contents
 .. toctree::
 	:maxdepth: 3
 	:caption: Documentation
+
 	usage
 	contributing
 	Source

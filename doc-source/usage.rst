@@ -8,7 +8,7 @@ This library provides the Flake8 plugin ``flake8-slots``  to require __slots__ t
 Flake8 codes
 --------------
 
-.. flake8-codes:: flake8_encodings
+.. flake8-codes:: flake8_slots
 
 	SLOT000
 	SLOT001
