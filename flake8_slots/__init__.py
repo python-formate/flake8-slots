@@ -126,6 +126,3 @@ class Plugin(flake8_helper.Plugin[Visitor]):
 	name: str = __name__
 	version: str = __version__  #: The plugin version
 	visitor_class = Visitor
-
-
-Visitor().visit(ast.parse(PathPlus(__file__).read_text()))
