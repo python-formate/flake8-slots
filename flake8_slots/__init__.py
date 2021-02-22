@@ -63,6 +63,10 @@ class ClassBodyVisitor(ast.NodeVisitor):
 			if isinstance(target, ast.Name) and target.id == "__slots__":
 				self.has_slots = True
 
+	def visit_AnnAssign(self, node: ast.AnnAssign):  # noqa: D102
+		if isinstance(node.target, ast.Name) and node.target.id == "__slots__":
+			self.has_slots = True
+
 
 def resolve_dotted_name(name: Union[str, ast.Name, ast.Attribute, ast.Call, ast.Subscript]) -> Iterator[str]:
 	if isinstance(name, str):

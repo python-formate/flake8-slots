@@ -17,6 +17,12 @@ typing_tuple_c = "import typing\nclass Tuple(typing.Tuple[str, int, float]):  __
 namedtuple_a = "import collections\nclass Person(collections.namedtuple('foo', 'name, age')):  __slots__ = ()"
 namedtuple_b = "from collections import namedtuple\nclass Person(namedtuple('foo', 'name, age')):  __slots__ = ()"
 
+namedtuple_c = """\
+from collections import namedtuple
+class Person(namedtuple('foo', 'name, age')):
+	__slots__: Tuple[str] = ()
+"""
+
 typing_namedtuple_a = """\
 import typing
 class Person(typing.NamedTuple):
@@ -33,6 +39,28 @@ class Person(NamedTuple):
 	age: int
 """
 
+typing_namedtuple_c = """\
+from typing import NamedTuple
+class Person(NamedTuple):
+	__slots__: Tuple[str] = ()
+	name: str
+	age: int
+"""
+
+typing_namedtuple_d = """\
+from typing import NamedTuple
+class Person(NamedTuple):
+	__slots__: List[str] = []
+	name: str
+	age: int
+"""
+
+mutable = """\
+from collections import Counter
+class Compound(Counter):
+	pass
+"""
+
 sources = pytest.mark.parametrize(
 		"source",
 		[
@@ -45,8 +73,12 @@ sources = pytest.mark.parametrize(
 				typing_tuple_c,
 				namedtuple_a,
 				namedtuple_b,
+				namedtuple_c,
 				typing_namedtuple_a,
 				typing_namedtuple_b,
+				typing_namedtuple_c,
+				typing_namedtuple_d,
+				mutable,
 				]
 		)
 
