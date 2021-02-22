@@ -42,10 +42,10 @@ __email__: str = "dominic@davis-foster.co.uk"
 
 __all__ = ["Visitor", "Plugin", "SLOT000", "SLOT001", "SLOT002", "SLOT003"]
 
-SLOT000 = "Define __slots__ for subclasses of str"
-SLOT001 = "Define __slots__ for subclasses of tuple"
-SLOT002 = "Define __slots__ for subclasses of collections.namedtuple"
-SLOT003 = "Define __slots__ for subclasses of typing.NamedTuple"
+SLOT000 = "SLOT000 Define __slots__ for subclasses of str"
+SLOT001 = "SLOT001 Define __slots__ for subclasses of tuple"
+SLOT002 = "SLOT002 Define __slots__ for subclasses of collections.namedtuple"
+SLOT003 = "SLOT003 Define __slots__ for subclasses of typing.NamedTuple"
 
 # TODO: custom immutable types - config option and SLOT004
 
