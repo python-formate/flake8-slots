@@ -5,7 +5,7 @@ import ast
 import pytest
 
 # this package
-from flake8_slots import SLOT000, SLOT001, SLOT002, SLOT003, Plugin, Visitor
+from flake8_slots import SLOT000, SLOT001, SLOT002, Plugin, Visitor
 
 string_a = "\nclass String(str): pass"
 string_b = "import builtins\nclass String(builtins.str): pass"
@@ -16,20 +16,6 @@ typing_tuple_b = "from typing import Tuple\nclass TupleTuple(Tuple): pass"
 typing_tuple_c = "import typing\nclass Tuple(typing.Tuple[str, int, float]): pass"
 namedtuple_a = "import collections\nclass Person(collections.namedtuple('foo', 'name, age')): pass"
 namedtuple_b = "from collections import namedtuple\nclass Person(namedtuple('foo', 'name, age')): pass"
-
-typing_namedtuple_a = """\
-import typing
-class Person(typing.NamedTuple):
-	name: str
-	age: int
-"""
-
-typing_namedtuple_b = """\
-from typing import NamedTuple
-class Person(NamedTuple):
-	name: str
-	age: int
-"""
 
 sources = pytest.mark.parametrize(
 		"source, error",
@@ -43,8 +29,6 @@ sources = pytest.mark.parametrize(
 				(typing_tuple_c, SLOT001),
 				(namedtuple_a, SLOT002),
 				(namedtuple_b, SLOT002),
-				(typing_namedtuple_a, SLOT003),
-				(typing_namedtuple_b, SLOT003),
 				]
 		)
 

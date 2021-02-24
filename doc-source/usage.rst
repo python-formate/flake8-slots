@@ -13,7 +13,6 @@ Flake8 codes
 	SLOT000
 	SLOT001
 	SLOT002
-	SLOT003
 
 For subclasses of immutable types it is recommended to use ``__slots__ = ()`` to keep the memory usage down.
 For subclasses of :class:`str` it is possible to define other variables which may be set on instances. For example:
@@ -22,7 +21,7 @@ For subclasses of :class:`str` it is possible to define other variables which ma
 
 	class MyString(str):
 
-		__slots__ = ("a_variable")
+		__slots__ = ("a_variable", )
 
 which will allow a value to be assigned to ``a_variable``.
 

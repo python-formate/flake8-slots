@@ -32,7 +32,6 @@ from typing import Iterator, Union
 
 # 3rd party
 import flake8_helper
-from domdf_python_tools.paths import PathPlus
 
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2020-2021 Dominic Davis-Foster"
@@ -40,12 +39,12 @@ __license__: str = "MIT License"
 __version__: str = "0.1.0"
 __email__: str = "dominic@davis-foster.co.uk"
 
-__all__ = ["Visitor", "Plugin", "SLOT000", "SLOT001", "SLOT002", "SLOT003"]
+__all__ = ["Visitor", "Plugin", "SLOT000", "SLOT001", "SLOT002"]
 
 SLOT000 = "SLOT000 Define __slots__ for subclasses of str"
 SLOT001 = "SLOT001 Define __slots__ for subclasses of tuple"
 SLOT002 = "SLOT002 Define __slots__ for subclasses of collections.namedtuple"
-SLOT003 = "SLOT003 Define __slots__ for subclasses of typing.NamedTuple"
+# SLOT003 # Don't reuse
 
 # TODO: custom immutable types - config option and SLOT004
 
@@ -101,9 +100,8 @@ class Visitor(flake8_helper.Visitor):
 			is_tuple = False
 
 		is_collections_namedtuple = "namedtuple" in bases or "collections.namedtuple" in bases  # SLOT002
-		is_typing_namedtuple = "NamedTuple" in bases or "typing.NamedTuple" in bases  # SLOT003
 
-		if not any([is_str, is_tuple, is_collections_namedtuple, is_typing_namedtuple]):
+		if not any([is_str, is_tuple, is_collections_namedtuple]):
 			return
 
 		body_visitor = ClassBodyVisitor()
@@ -116,8 +114,6 @@ class Visitor(flake8_helper.Visitor):
 				self.report_error(node, SLOT001)
 			if is_collections_namedtuple:
 				self.report_error(node, SLOT002)
-			if is_typing_namedtuple:
-				self.report_error(node, SLOT003)
 
 
 class Plugin(flake8_helper.Plugin[Visitor]):

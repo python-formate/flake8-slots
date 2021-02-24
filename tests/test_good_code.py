@@ -26,7 +26,6 @@ class Person(namedtuple('foo', 'name, age')):
 typing_namedtuple_a = """\
 import typing
 class Person(typing.NamedTuple):
-	__slots__ = ()
 	name: str
 	age: int
 """
@@ -34,23 +33,6 @@ class Person(typing.NamedTuple):
 typing_namedtuple_b = """\
 from typing import NamedTuple
 class Person(NamedTuple):
-	__slots__ = ()
-	name: str
-	age: int
-"""
-
-typing_namedtuple_c = """\
-from typing import NamedTuple
-class Person(NamedTuple):
-	__slots__: Tuple[str] = ()
-	name: str
-	age: int
-"""
-
-typing_namedtuple_d = """\
-from typing import NamedTuple
-class Person(NamedTuple):
-	__slots__: List[str] = []
 	name: str
 	age: int
 """
@@ -76,8 +58,6 @@ sources = pytest.mark.parametrize(
 				namedtuple_c,
 				typing_namedtuple_a,
 				typing_namedtuple_b,
-				typing_namedtuple_c,
-				typing_namedtuple_d,
 				mutable,
 				]
 		)
