@@ -1,3 +1,26 @@
 [build-system]
 requires = [ "setuptools>=40.6.0", "wheel>=0.34.2",]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "flake8-slots"
+version = "0.1.1"
+description = "A Flake8 plugin to require __slots__ to be defined for subclasses of immutable types."
+readme = "README.rst"
+keywords = [ "flake8",]
+dynamic = [ "requires-python", "classifiers", "dependencies",]
+[[project.authors]]
+email = "dominic@davis-foster.co.uk"
+name = "Dominic Davis-Foster"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/domdfcoding/flake8-slots"
+"Issue Tracker" = "https://github.com/domdfcoding/flake8-slots/issues"
+"Source Code" = "https://github.com/domdfcoding/flake8-slots"
+Documentation = "https://flake8-slots.readthedocs.io/en/latest"
+
+[project.entry-points."flake8.extension"]
+SLOTS = "flake8_slots:Plugin"
