@@ -10,10 +10,12 @@ license: 'MIT'
 short_desc: "A Flake8 plugin to require __slots__ to be defined for subclasses of immutable types."
 min_coverage: 100
 
+python_deploy_version: 3.6
+use_whey: true
+docs_fail_on_warning: true
+
 conda_channels:
  - conda-forge
-
-python_deploy_version: 3.6
 
 # Versions to run tests for
 python_versions:
@@ -46,5 +48,3 @@ keywords:
 
 sphinx_conf_epilogue:
  - nitpicky = True
-
-docs_fail_on_warning: true
