@@ -38,7 +38,7 @@ extra_sphinx_extensions:
 
 entry_points:
   flake8.extension:
-   - SLOTS=flake8_slots:Plugin
+   - SLOT=flake8_slots:Plugin
 
 sphinx_html_theme: furo
 standalone_contrib_guide: true

@@ -37,4 +37,4 @@ license-key = "MIT"
 package = "flake8_slots"
 
 [project.entry-points."flake8.extension"]
-SLOTS = "flake8_slots:Plugin"
+SLOT = "flake8_slots:Plugin"
