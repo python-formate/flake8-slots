@@ -43,6 +43,14 @@ class Compound(Counter):
 	pass
 """
 
+enum = """\
+from enum import Enum
+class Protocols(str, Enum):
+	HTTP = "http"
+	FTP = "ftp"
+	SSH = "SSH"
+"""
+
 sources = pytest.mark.parametrize(
 		"source",
 		[
@@ -59,6 +67,7 @@ sources = pytest.mark.parametrize(
 				typing_namedtuple_a,
 				typing_namedtuple_b,
 				mutable,
+				enum,
 				]
 		)
 

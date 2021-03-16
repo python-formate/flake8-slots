@@ -28,6 +28,7 @@ A Flake8 plugin to require ``__slots__`` to be defined for subclasses of immutab
 
 # stdlib
 import ast
+import re
 from typing import Iterator, Union
 
 # 3rd party
@@ -81,6 +82,9 @@ def resolve_dotted_name(name: Union[str, ast.Name, ast.Attribute, ast.Call, ast.
 		yield from resolve_dotted_name(name.func)  # type: ignore
 
 
+_enum_re = re.compile(r"\.?Enum")
+
+
 class Visitor(flake8_helper.Visitor):
 	"""
 	AST visitor to identify missing ``__slots__`` for subclasses of immutable types.
@@ -90,7 +94,11 @@ class Visitor(flake8_helper.Visitor):
 
 		bases = ['.'.join(resolve_dotted_name(base)) for base in node.bases]  # type: ignore
 
-		is_str = "str" in bases or "builtins.str" in bases  # SLOT000
+		is_str = False
+
+		if "str" in bases or "builtins.str" in bases:  # SLOT000
+			if not any(map(_enum_re.match, bases)):
+				is_str = True
 
 		if "tuple" in bases or "builtins.tuple" in bases:  # SLOT001
 			is_tuple = True
