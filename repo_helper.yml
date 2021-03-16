@@ -4,15 +4,17 @@ modname: flake8-slots
 copyright_years: "2020-2021"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
-version: "0.1.1"
+version: "0.1.2"
 username: "domdfcoding"
 license: 'MIT'
 short_desc: "A Flake8 plugin to require __slots__ to be defined for subclasses of immutable types."
-min_coverage: 100
 
 python_deploy_version: 3.6
 use_whey: true
+min_coverage: 100
 docs_fail_on_warning: true
+sphinx_html_theme: furo
+standalone_contrib_guide: true
 
 conda_channels:
  - conda-forge
@@ -40,9 +42,6 @@ extra_sphinx_extensions:
 entry_points:
   flake8.extension:
    - SLOT=flake8_slots:Plugin
-
-sphinx_html_theme: furo
-standalone_contrib_guide: true
 
 keywords:
  - flake8
