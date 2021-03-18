@@ -151,3 +151,31 @@ To install with ``conda``:
 		$ conda install flake8-slots
 
 .. end installation
+
+
+Flake8 codes
+--------------
+
+============== =====================================================================
+Code           Description
+============== =====================================================================
+SLOT000        Define __slots__ for subclasses of str
+SLOT001        Define __slots__ for subclasses of tuple
+SLOT002        Define __slots__ for subclasses of collections.namedtuple
+============== =====================================================================
+
+
+Use as a pre-commit hook
+--------------------------
+
+See `pre-commit <https://github.com/pre-commit/pre-commit>`_ for instructions
+
+Sample ``.pre-commit-config.yaml``:
+
+.. code-block:: yaml
+
+	 - repo: https://gitlab.com/pycqa/flake8
+	   rev: 3.8.1
+	   hooks:
+	    - id: flake8
+	      additional_dependencies: [flake8-slots==0.1.3]
