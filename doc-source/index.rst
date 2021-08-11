@@ -136,8 +136,12 @@ Installation
 
 .. end installation
 
+
 Contents
 ---------
+
+.. html-section::
+
 
 .. toctree::
 	:hidden:
@@ -146,10 +150,10 @@ Contents
 
 .. toctree::
 	:maxdepth: 3
-	:caption: Documentation
 
 	usage
 	Source
+	license
 
 .. sidebar-links::
 	:caption: Links
