@@ -149,13 +149,14 @@ Contents
 	:caption: Documentation
 
 	usage
-	contributing
 	Source
 
 .. sidebar-links::
 	:caption: Links
 	:github:
 	:pypi: flake8-slots
+
+	Contributing Guide<https://contributing-to-formate.readthedocs.io>
 
 
 .. start links
@@ -164,6 +165,6 @@ Contents
 
 	View the :ref:`Function Index <genindex>` or browse the `Source Code <_modules/index.html>`__.
 
-	:github:repo:`Browse the GitHub Repository <domdfcoding/flake8-slots>`
+	:github:repo:`Browse the GitHub Repository <python-formate/flake8-slots>`
 
 .. end links

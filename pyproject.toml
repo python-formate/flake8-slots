@@ -19,9 +19,9 @@ email = "dominic@davis-foster.co.uk"
 file = "LICENSE"
 
 [project.urls]
-Homepage = "https://github.com/domdfcoding/flake8-slots"
-"Issue Tracker" = "https://github.com/domdfcoding/flake8-slots/issues"
-"Source Code" = "https://github.com/domdfcoding/flake8-slots"
+Homepage = "https://github.com/python-formate/flake8-slots"
+"Issue Tracker" = "https://github.com/python-formate/flake8-slots/issues"
+"Source Code" = "https://github.com/python-formate/flake8-slots"
 Documentation = "https://flake8-slots.readthedocs.io/en/latest"
 
 [tool.whey]
@@ -43,7 +43,7 @@ conda-channels = [ "conda-forge", "domdfcoding",]
 extras = "all"
 
 [tool.sphinx-pyproject]
-github_username = "domdfcoding"
+github_username = "python-formate"
 github_repository = "flake8-slots"
 author = "Dominic Davis-Foster"
 project = "flake8-slots"

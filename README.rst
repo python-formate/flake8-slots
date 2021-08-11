@@ -34,40 +34,40 @@ flake8-slots
 	:target: https://flake8-slots.readthedocs.io/en/latest
 	:alt: Documentation Build Status
 
-.. |docs_check| image:: https://github.com/domdfcoding/flake8-slots/workflows/Docs%20Check/badge.svg
-	:target: https://github.com/domdfcoding/flake8-slots/actions?query=workflow%3A%22Docs+Check%22
+.. |docs_check| image:: https://github.com/python-formate/flake8-slots/workflows/Docs%20Check/badge.svg
+	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22Docs+Check%22
 	:alt: Docs Check Status
 
-.. |actions_linux| image:: https://github.com/domdfcoding/flake8-slots/workflows/Linux/badge.svg
-	:target: https://github.com/domdfcoding/flake8-slots/actions?query=workflow%3A%22Linux%22
+.. |actions_linux| image:: https://github.com/python-formate/flake8-slots/workflows/Linux/badge.svg
+	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22Linux%22
 	:alt: Linux Test Status
 
-.. |actions_windows| image:: https://github.com/domdfcoding/flake8-slots/workflows/Windows/badge.svg
-	:target: https://github.com/domdfcoding/flake8-slots/actions?query=workflow%3A%22Windows%22
+.. |actions_windows| image:: https://github.com/python-formate/flake8-slots/workflows/Windows/badge.svg
+	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22Windows%22
 	:alt: Windows Test Status
 
-.. |actions_macos| image:: https://github.com/domdfcoding/flake8-slots/workflows/macOS/badge.svg
-	:target: https://github.com/domdfcoding/flake8-slots/actions?query=workflow%3A%22macOS%22
+.. |actions_macos| image:: https://github.com/python-formate/flake8-slots/workflows/macOS/badge.svg
+	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22macOS%22
 	:alt: macOS Test Status
 
-.. |actions_flake8| image:: https://github.com/domdfcoding/flake8-slots/workflows/Flake8/badge.svg
-	:target: https://github.com/domdfcoding/flake8-slots/actions?query=workflow%3A%22Flake8%22
+.. |actions_flake8| image:: https://github.com/python-formate/flake8-slots/workflows/Flake8/badge.svg
+	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22Flake8%22
 	:alt: Flake8 Status
 
-.. |actions_mypy| image:: https://github.com/domdfcoding/flake8-slots/workflows/mypy/badge.svg
-	:target: https://github.com/domdfcoding/flake8-slots/actions?query=workflow%3A%22mypy%22
+.. |actions_mypy| image:: https://github.com/python-formate/flake8-slots/workflows/mypy/badge.svg
+	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://requires.io/github/domdfcoding/flake8-slots/requirements.svg?branch=master
-	:target: https://requires.io/github/domdfcoding/flake8-slots/requirements/?branch=master
+.. |requires| image:: https://requires.io/github/python-formate/flake8-slots/requirements.svg?branch=master
+	:target: https://requires.io/github/python-formate/flake8-slots/requirements/?branch=master
 	:alt: Requirements Status
 
-.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/flake8-slots/master?logo=coveralls
-	:target: https://coveralls.io/github/domdfcoding/flake8-slots?branch=master
+.. |coveralls| image:: https://img.shields.io/coveralls/github/python-formate/flake8-slots/master?logo=coveralls
+	:target: https://coveralls.io/github/python-formate/flake8-slots?branch=master
 	:alt: Coverage
 
-.. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/flake8-slots?logo=codefactor
-	:target: https://www.codefactor.io/repository/github/domdfcoding/flake8-slots
+.. |codefactor| image:: https://img.shields.io/codefactor/grade/github/python-formate/flake8-slots?logo=codefactor
+	:target: https://www.codefactor.io/repository/github/python-formate/flake8-slots
 	:alt: CodeFactor Grade
 
 .. |pypi-version| image:: https://img.shields.io/pypi/v/flake8-slots
@@ -94,19 +94,19 @@ flake8-slots
 	:target: https://anaconda.org/domdfcoding/flake8-slots
 	:alt: Conda - Platform
 
-.. |license| image:: https://img.shields.io/github/license/domdfcoding/flake8-slots
-	:target: https://github.com/domdfcoding/flake8-slots/blob/master/LICENSE
+.. |license| image:: https://img.shields.io/github/license/python-formate/flake8-slots
+	:target: https://github.com/python-formate/flake8-slots/blob/master/LICENSE
 	:alt: License
 
-.. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/flake8-slots
+.. |language| image:: https://img.shields.io/github/languages/top/python-formate/flake8-slots
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/flake8-slots/v0.1.4
-	:target: https://github.com/domdfcoding/flake8-slots/pulse
+.. |commits-since| image:: https://img.shields.io/github/commits-since/python-formate/flake8-slots/v0.1.4
+	:target: https://github.com/python-formate/flake8-slots/pulse
 	:alt: GitHub commits since tagged version
 
-.. |commits-latest| image:: https://img.shields.io/github/last-commit/domdfcoding/flake8-slots
-	:target: https://github.com/domdfcoding/flake8-slots/commit/master
+.. |commits-latest| image:: https://img.shields.io/github/last-commit/python-formate/flake8-slots
+	:target: https://github.com/python-formate/flake8-slots/commit/master
 	:alt: GitHub last commit
 
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2021

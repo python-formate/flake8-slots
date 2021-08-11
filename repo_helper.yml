@@ -5,7 +5,9 @@ copyright_years: "2020-2021"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
 version: "0.1.4"
-username: "domdfcoding"
+username: "python-formate"
+assignee: "domdfcoding"
+primary_conda_channel: "domdfcoding"
 license: 'MIT'
 short_desc: "A Flake8 plugin to require __slots__ to be defined for subclasses of immutable types."
 

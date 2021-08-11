@@ -3,13 +3,13 @@ Downloading source code
 =========================
 
 The ``flake8-slots`` source code is available on GitHub,
-and can be accessed from the following URL: https://github.com/domdfcoding/flake8-slots
+and can be accessed from the following URL: https://github.com/python-formate/flake8-slots
 
 If you have ``git`` installed, you can clone the repository with the following command:
 
 .. prompt:: bash
 
-	git clone https://github.com/domdfcoding/flake8-slots
+	git clone https://github.com/python-formate/flake8-slots
 
 .. parsed-literal::
 
