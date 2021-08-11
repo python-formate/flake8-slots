@@ -4,6 +4,11 @@
 exclude: ^$
 
 repos:
+ - repo: https://github.com/repo-helper/pyproject-parser
+   rev: v0.4.1
+   hooks:
+    - id: reformat-pyproject
+
  - repo: https://github.com/pre-commit/pre-commit-hooks
    rev: v4.0.1
    hooks:
@@ -31,7 +36,7 @@ repos:
       args:
        - --allow-git
     - id: check-docstring-first
-      exclude: ^(doc-source/conf|__pkginfo__|make_conda_recipe|setup|tests/.*)\.py$
+      exclude: ^(doc-source/conf|__pkginfo__|setup|tests/.*)\.py$
     - id: bind-requirements
 
  - repo: https://github.com/domdfcoding/flake8-dunder-all
@@ -71,7 +76,7 @@ repos:
    rev: v0.4.9
    hooks:
     - id: formate
-      exclude: ^(doc-source/conf|__pkginfo__|make_conda_recipe|setup)\.(_)?py$
+      exclude: ^(doc-source/conf|__pkginfo__|setup)\.(_)?py$
 
  - repo: https://github.com/domdfcoding/dep_checker
    rev: v0.6.2
