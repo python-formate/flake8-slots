@@ -58,12 +58,12 @@ class ClassBodyVisitor(ast.NodeVisitor):
 	#: :py:obj:`True` if the class defines ``__slots__``.
 	has_slots: bool = False
 
-	def visit_Assign(self, node: ast.Assign):  # noqa: D102
+	def visit_Assign(self, node: ast.Assign):
 		for target in node.targets:
 			if isinstance(target, ast.Name) and target.id == "__slots__":
 				self.has_slots = True
 
-	def visit_AnnAssign(self, node: ast.AnnAssign):  # noqa: D102
+	def visit_AnnAssign(self, node: ast.AnnAssign):
 		if isinstance(node.target, ast.Name) and node.target.id == "__slots__":
 			self.has_slots = True
 
