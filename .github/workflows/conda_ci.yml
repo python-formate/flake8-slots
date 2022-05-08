@@ -55,7 +55,7 @@ jobs:
 
       - name: "Install package"
         run: |
-          $CONDA/bin/conda install -c file://$(pwd)/conda-bld flake8-slots=0.1.4=py_1 -y || exit 1
+          $CONDA/bin/conda install -c file://$(pwd)/conda-bld flake8-slots=0.1.5=py_1 -y || exit 1
 
       - name: "Run Tests"
         run: |

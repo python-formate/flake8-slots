@@ -101,7 +101,7 @@ flake8-slots
 .. |language| image:: https://img.shields.io/github/languages/top/python-formate/flake8-slots
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/python-formate/flake8-slots/v0.1.4
+.. |commits-since| image:: https://img.shields.io/github/commits-since/python-formate/flake8-slots/v0.1.5
 	:target: https://github.com/python-formate/flake8-slots/pulse
 	:alt: GitHub commits since tagged version
 
@@ -174,4 +174,4 @@ Sample ``.pre-commit-config.yaml``:
 	   rev: 3.8.1
 	   hooks:
 	    - id: flake8
-	      additional_dependencies: [flake8-slots==0.1.4]
+	      additional_dependencies: [flake8-slots==0.1.5]
