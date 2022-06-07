@@ -40,7 +40,7 @@ __license__: str = "MIT License"
 __version__: str = "0.1.5"
 __email__: str = "dominic@davis-foster.co.uk"
 
-__all__ = ["Visitor", "Plugin", "SLOT000", "SLOT001", "SLOT002"]
+__all__ = ("Visitor", "Plugin", "SLOT000", "SLOT001", "SLOT002")
 
 SLOT000 = "SLOT000 Define __slots__ for subclasses of str"
 SLOT001 = "SLOT001 Define __slots__ for subclasses of tuple"
@@ -58,12 +58,14 @@ class ClassBodyVisitor(ast.NodeVisitor):
 	#: :py:obj:`True` if the class defines ``__slots__``.
 	has_slots: bool = False
 
-	def visit_Assign(self, node: ast.Assign):
-		for target in node.targets:
-			if isinstance(target, ast.Name) and target.id == "__slots__":
-				self.has_slots = True
+	def visit_Assign(self, node: ast.Assign) -> None:
+		NameNode = ast.Name
 
-	def visit_AnnAssign(self, node: ast.AnnAssign):
+		for target in node.targets:
+			if isinstance(target, NameNode) and target.id == "__slots__":
+				self.has_slots = True  # pylint: disable=loop-invariant-statement
+
+	def visit_AnnAssign(self, node: ast.AnnAssign) -> None:
 		if isinstance(node.target, ast.Name) and node.target.id == "__slots__":
 			self.has_slots = True
 
@@ -74,12 +76,12 @@ def resolve_dotted_name(name: Union[str, ast.Name, ast.Attribute, ast.Call, ast.
 	elif isinstance(name, ast.Name):
 		yield name.id
 	elif isinstance(name, ast.Attribute):
-		yield from resolve_dotted_name(name.value)  # type: ignore
+		yield from resolve_dotted_name(name.value)  # type: ignore[arg-type]
 		yield from resolve_dotted_name(name.attr)
 	elif isinstance(name, ast.Subscript):
-		yield from resolve_dotted_name(name.value)  # type: ignore
+		yield from resolve_dotted_name(name.value)  # type: ignore[arg-type]
 	elif isinstance(name, ast.Call):
-		yield from resolve_dotted_name(name.func)  # type: ignore
+		yield from resolve_dotted_name(name.func)  # type: ignore[arg-type]
 
 
 _enum_re = re.compile(r"\.?Enum")
@@ -90,9 +92,9 @@ class Visitor(flake8_helper.Visitor):
 	AST visitor to identify missing ``__slots__`` for subclasses of immutable types.
 	"""
 
-	def visit_ClassDef(self, node: ast.ClassDef):  # noqa: D102
+	def visit_ClassDef(self, node: ast.ClassDef) -> None:  # noqa: D102
 
-		bases = ['.'.join(resolve_dotted_name(base)) for base in node.bases]  # type: ignore
+		bases = ['.'.join(resolve_dotted_name(base)) for base in node.bases]  # type: ignore[arg-type]
 
 		is_str = False
 
