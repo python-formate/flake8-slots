@@ -58,8 +58,8 @@ flake8-slots
 	:target: https://github.com/python-formate/flake8-slots/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://dependency-dash.herokuapp.com/github/python-formate/flake8-slots/badge.svg
-	:target: https://dependency-dash.herokuapp.com/github/python-formate/flake8-slots/
+.. |requires| image:: https://dependency-dash.repo-helper.uk/github/python-formate/flake8-slots/badge.svg
+	:target: https://dependency-dash.repo-helper.uk/github/python-formate/flake8-slots/
 	:alt: Requirements Status
 
 .. |coveralls| image:: https://img.shields.io/coveralls/github/python-formate/flake8-slots/master?logo=coveralls
