@@ -4,7 +4,7 @@ modname: flake8-slots
 copyright_years: "2020-2021"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
-version: "0.1.5"
+version: "0.1.6"
 username: "python-formate"
 assignee: "domdfcoding"
 primary_conda_channel: "domdfcoding"
