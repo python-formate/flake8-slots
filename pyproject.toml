@@ -14,7 +14,6 @@ dynamic = [ "requires-python", "classifiers", "dependencies",]
 name = "Dominic Davis-Foster"
 email = "dominic@davis-foster.co.uk"
 
-
 [project.license]
 file = "LICENSE"
 
@@ -23,6 +22,9 @@ Homepage = "https://github.com/python-formate/flake8-slots"
 "Issue Tracker" = "https://github.com/python-formate/flake8-slots/issues"
 "Source Code" = "https://github.com/python-formate/flake8-slots"
 Documentation = "https://flake8-slots.readthedocs.io/en/latest"
+
+[project.entry-points."flake8.extension"]
+SLOT = "flake8_slots:Plugin"
 
 [tool.whey]
 base-classifiers = [
@@ -63,7 +65,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinxcontrib.extras_require",
     "sphinx.ext.todo",
-    "sphinxemoji.sphinxemoji",
     "notfound.extension",
     "sphinx_copybutton",
     "sphinxcontrib.default_values",
@@ -75,7 +76,6 @@ extensions = [
     "sphinx_toolbox.flake8",
     "sphinx_favicon",
 ]
-sphinxemoji_style = "twemoji"
 gitstamp_fmt = "%d %b %Y"
 templates_path = [ "_templates",]
 html_static_path = [ "_static",]
@@ -135,8 +135,15 @@ show_error_codes = true
 [tool.snippet-fmt]
 directives = [ "code-block",]
 
-[project.entry-points."flake8.extension"]
-SLOT = "flake8_slots:Plugin"
+[tool.snippet-fmt.languages.python]
+reformat = true
+
+[tool.snippet-fmt.languages.TOML]
+reformat = true
+
+[tool.snippet-fmt.languages.ini]
+
+[tool.snippet-fmt.languages.json]
 
 [tool.dependency-dash."requirements.txt"]
 order = 10
@@ -148,13 +155,3 @@ include = false
 [tool.dependency-dash."doc-source/requirements.txt"]
 order = 30
 include = false
-
-[tool.snippet-fmt.languages.python]
-reformat = true
-
-[tool.snippet-fmt.languages.TOML]
-reformat = true
-
-[tool.snippet-fmt.languages.ini]
-
-[tool.snippet-fmt.languages.json]
