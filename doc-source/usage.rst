@@ -28,7 +28,7 @@ which will allow a value to be assigned to ``a_variable``.
 Pre-commit hook
 ----------------
 
-``flake8-encodings`` can also be used as a ``pre-commit`` hook
+``flake8-slots`` can also be used as a ``pre-commit`` hook
 See `pre-commit <https://github.com/pre-commit/pre-commit>`_ for instructions
 
 Sample ``.pre-commit-config.yaml``:
