@@ -11,7 +11,8 @@ primary_conda_channel: "domdfcoding"
 license: 'MIT'
 short_desc: "A Flake8 plugin to require __slots__ to be defined for subclasses of immutable types."
 
-python_deploy_version: 3.6
+mypy_version: 1.16
+python_deploy_version: 3.9
 use_whey: true
 min_coverage: 100
 sphinx_html_theme: furo
