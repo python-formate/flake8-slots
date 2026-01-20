@@ -109,11 +109,11 @@ flake8-slots
 	:target: https://github.com/python-formate/flake8-slots/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2025
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/flake8-slots
-	:target: https://pypi.org/project/flake8-slots/
+	:target: https://pypistats.org/packages/flake8-slots
 	:alt: PyPI - Downloads
 
 .. end shields
